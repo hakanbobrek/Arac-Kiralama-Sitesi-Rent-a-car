@@ -1,0 +1,39 @@
+﻿@model WebApplication11.Models.tümsiniflarim.Admin
+@{
+    ViewBag.Title = "PersonelGetir";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+@using (Html.BeginForm("PersonelGuncelle", "Admin", FormMethod.Post))
+{
+    @Html.LabelFor(x => x.ID, new { @style = "margin-left:30px; font-weight:bold;margin-top:30px; " })
+    @Html.TextBoxFor(x => x.ID, new { @class = "form-control", @readonly = "readonly", @style = "margin-left:30px; width:1080px" })
+    <br />
+    @Html.LabelFor(x => x.Ad, new { @style = "margin-left:30px; font-weight:bold; " })
+    @Html.TextBoxFor(x => x.Ad, new { @class = "form-control", @style = "margin-left:30px; width:1080px" })
+    <br />
+    @Html.LabelFor(x => x.Soyad, new { @style = "margin-left:30px; font-weight:bold; " })
+    @Html.TextBoxFor(x => x.Soyad, new { @class = "form-control", @style = "margin-left:30px; width:1080px" })
+    <br />
+    @Html.LabelFor(x => x.TC, new { @style = "margin-left:30px; font-weight:bold; " })
+    @Html.TextBoxFor(x => x.TC, new { @class = "form-control", @style = "margin-left:30px; width:1080px" })
+    <br />
+    @Html.LabelFor(x => x.Sifre, new { @style = "margin-left:30px; font-weight:bold; " })
+    @Html.TextBoxFor(x => x.Sifre, new { @class = "form-control", @style = "margin-left:30px; width:1080px" })
+    <br />
+    
+    @Html.LabelFor(x => x.MAIL, new { @style = "margin-left:30px; font-weight:bold; " })
+    @Html.TextBoxFor(x => x.MAIL, new { @class = "form-control", @style = "margin-left:30px; width:1080px" })
+    <br />
+    @Html.LabelFor(x => x.TELEFON, new { @style = "margin-left:30px; font-weight:bold; " })
+    @Html.TextBoxFor(x => x.TELEFON, new { @class = "form-control", @style = "margin-left:30px; width:1080px" })
+    <br />
+    
+    <br />
+
+
+    <button class="btn btn-default" style="background-color:green;margin-left:30px; color:white;">Güncelle</button>
+    @Html.ActionLink("İptal", "Index", new { }, new { @class = "btn btn-primary", @style = "background-color:red; color:white" })
+}
+

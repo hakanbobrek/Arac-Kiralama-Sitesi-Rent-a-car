@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+
+    <title>@ViewBag.Title - HAK4 ARAÇ KİRALAMA</title>
+    <link href="~/Content/baslangic.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+    <div class="kategori">
+        <br />  @using (Html.BeginForm("Giris", "Login", FormMethod.Post))
+        {<button class="login100-form-btn" style="font-size:20px; background-color:white;float:right">
+                Giriş Yap
+            </button> }
+            <h2 style="text-align:center; color:white"> HAK4  ARAÇ  KİRALAMA</h2>
+            <ul>
+                <li><a href="\Anasayfa\Index">Ana sayfa</a></li>
+
+                <li><a href="\Anasayfa\Hakkimizda">Hakkımızda</a></li>
+
+                <li>
+                    <a href="\Anasayfa\Araclar">Araçlarımız</a>
+                </li>
+
+              
+
+                <li><a href="\Anasayfa\Iletisim">İletişim</a></li>
+            </ul>
+        </div>
+
+
+    <div id="layoutSidenav_content">
+        <main>
+            @RenderBody()
+        </main>
+        <footer class="py-4 bg-light mt-auto">
+            <div class="container-fluid">
+                <div class="d-flex align-items-center justify-content-between small">
+
+                    <div class="text-muted" style="position: fixed;  bottom: 0px;left: 0px;width: 100%;padding:15px;">  Tüm Hakları Saklıdır &copy; 2021 - HAKAN BÖBREK</div>
+
+                </div>
+            </div>
+        </footer>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <script src="~/web/dist/js/scripts.js"></script>
+
+</body>
+</html>

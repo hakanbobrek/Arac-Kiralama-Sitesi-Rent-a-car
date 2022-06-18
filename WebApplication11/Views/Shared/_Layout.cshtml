@@ -1,0 +1,182 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>HAK4 ARAÇ KİRALAMA</title>
+    <link href="~/web/dist/css/styles.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+        <a class="navbar-brand" href="index.html">HAK4 ARAÇ KİRALAMA</a><button class="btn btn-link btn-sm order-1 order-lg-0" id="sidebarToggle" href="#">
+            <i class="fas fa-eye"></i>
+        </button><!-- Navbar Search-->
+   <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
+       <div class="input-group" style="margin-right:40px;color:white">
+           <div style="padding-top:15px">
+               @Session["ad"]  @Session["soyad"]
+           </div>
+           <a href="@Session["resim"]" target="_blank"> <img width="50" height="50" /></a>
+       </div>
+   </form>
+        <!-- Navbar-->
+        <ul class="navbar-nav ml-auto ml-md-0">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" id="userDropdown" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
+                    @Html.ActionLink("Hesabım", "AddminCagir", "Admin", new { id = Session["id"] }, new { @class = "dropdown-item" })
+                    <div class="dropdown-divider"></div>
+                    @Html.ActionLink("Çıkış Yap", "LogOut", "Login", new { }, new { @class = "dropdown-item" })
+
+                </div>
+            </li>
+        </ul>
+    </nav> <div>
+    @using (Html.BeginForm("Index", "Anasayfa", FormMethod.Post))
+    {<button class="login100-form-btn" style="font-size:20px; background-color:white;float:right">
+            Ana Sayfaya git
+        </button>}
+</div>
+    <div id="layoutSidenav">
+        <div id="layoutSidenav_nav">
+            <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+                <div class="sb-sidenav-menu">
+                    <div class="nav">
+                        <div class="sb-sidenav-menu-heading">MENÜ</div>
+                        <a class="nav-link" href="/Marka/Index/">
+                            <div class="sb-nav-link-icon"><i class="fas fa-cubes"></i></div>
+                            Markalar
+                        </a>
+                        <a class="nav-link" href="/Urun/Index/">
+                            <div class="sb-nav-link-icon"><i class="fas fa-archive"></i></div>
+                            Ürünler
+                        </a>
+                       
+                        <a class="nav-link" href="/Admin/Index/">
+                            <div class="sb-nav-link-icon"><i class="fas fa-handshake"></i></div>
+                           Adminler
+                        </a>
+                        
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div id="layoutSidenav_content">
+            <main>
+                @RenderBody()
+            </main>
+            <footer class="py-4 bg-light mt-auto">
+                <div class="container-fluid">
+                    <div class="d-flex align-items-center justify-content-between small">
+                        <div class="text-muted">Tüm Hakları Saklıdır &copy; 2021 - HAKAN BÖBREK</div>
+
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <script src="~/web/dist/js/scripts.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@*<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>@ViewBag.Title - My ASP.NET Application</title>
+        <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+        <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <script src="~/Scripts/modernizr-2.8.3.js"></script>
+    </head>
+    <body>
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container body-content">
+            @RenderBody()
+            <hr />
+
+        </div>
+
+        <script src="~/Scripts/jquery-3.4.1.min.js"></script>
+        <script src="~/Scripts/bootstrap.min.js"></script>
+    </body>
+    </html>*@

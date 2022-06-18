@@ -1,0 +1,55 @@
+﻿@using WebApplication11.Models.tümsiniflarim
+@model List<Urun>
+@{
+    ViewBag.Title = "Aston Martin";
+    Layout = "~/Views/Shared/_LayoutPage2.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/Content/urun.css" rel="stylesheet" />
+    <title>Index</title>
+
+</head>
+<body>
+
+    <TABLE align="center">
+
+        @foreach (var x in Model)
+        {
+            <tr>
+                <td>
+                    <p style="font-size:30px;font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif"> @x.Ad</p>
+                </td>
+            </tr>
+            <TR>
+
+                <TD style="width:300px;" ROWSPAN=2><img src="@x.Fotograf" style="width:100% " /></TD>
+
+                <TD id="acıklama">KİRALIK DURUMU:<br /> @x.Durum</TD>
+                <TD id="acıklama">KİRALIKTAN DÖNÜŞ:<br /> @x.Tarih</TD>
+
+                <TD id="acıklama">STOK AFETİ:<br /> @x.Stok </TD>
+
+            </TR>
+
+            <TR>
+
+                <TD id="acıklama">KİRALAMA FİYATI:<br /> @x.KiralamaFiyat </TD>
+                <TD id="acıklama">ARAÇ ÖZELLİKLERİ:<br /> @x.Ozellikler</TD>
+                <td id="acıklama">
+                    İLETİŞİME GEÇ:<br /> @using (Html.BeginForm("Iletisim", "Anasayfa", FormMethod.Post))
+                    {<button class="login100-form-btn" style="font-size:20px; background-color:#ff0000;float:left">
+                            İLETİŞİME GEÇ
+                        </button>}
+                </td>
+
+
+            </TR>
+        }
+    </TABLE>
+</body>
+</html>

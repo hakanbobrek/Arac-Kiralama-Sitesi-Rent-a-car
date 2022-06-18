@@ -1,0 +1,33 @@
+﻿.kategori {
+    margin: -18px auto auto auto;
+    height: 120px;
+    background-color: black;
+    width: 100%;
+    height: auto;
+}
+
+ul {
+    list-style-type: none;
+    text-align: center;
+    margin: 0 auto;
+    overflow: hidden;
+    background-color: black;
+}
+
+li {
+    display: inline-block;
+}
+
+    li a {  
+        display: block;
+        color: #ffffff;
+        text-align: start;
+        font-size:20px;
+        padding: 15px 45px;
+        text-decoration: none;
+    }
+
+        li a:hover {
+            background-color: #f39c12;
+        }
+
